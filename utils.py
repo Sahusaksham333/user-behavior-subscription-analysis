@@ -19,7 +19,7 @@ def load_raw_data():
 @st.cache_data(show_spinner="Loading screen definitions...")
 def load_top_screens():
     ts_path = os.path.join(os.path.dirname(__file__), "top_screens.csv")
-    return pd.read_csv(ts_path).top_screens.values
+    return pd.read_csv(ts_path).top_screens.tolist()
 
 
 @st.cache_data(show_spinner="Running feature engineering pipeline...")
