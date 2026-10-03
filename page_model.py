@@ -288,7 +288,7 @@ def render(clean_df):
         return "color: #43E8D8; font-weight: 600" if val == 1 else "color: #FF6584"
 
     st.dataframe(
-        results.head(50).style.applymap(format_status, subset=["Actual Status", "Predicted Status"]),
+        results.head(50).style.map(format_status, subset=["Actual Status", "Predicted Status"]),
         use_container_width=True, 
         height=400,
     )
